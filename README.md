@@ -1,37 +1,34 @@
-# 🎓 30-Day Computer Science Practical Revision
+# 🎓 CSForge - Forge Your Computer Science Career
 
-Welcome to your **30-Day Computer Science Practical Revision** workspace! This project is a friendly, step-by-step learning program designed to take you from a curious beginner to a confident programmer who understands how systems, networks, databases, and algorithms actually work.
+Learn • Practice • Build • Get Hired
 
-Instead of just reading theory, this project is built entirely around **hands-on coding**. Every day, you will write a small, isolated Python script to build real, working programs from scratch.
+Welcome to **CSForge**! This project is a world-class, interactive Computer Science learning ecosystem designed to take you from a curious beginner to a confident software engineer who understands how systems, networks, databases, and algorithms actually work.
 
 ---
 
 ## ✨ Key Highlights
 
-- 🧭 **A Structured 30-Day Roadmap**: Master key concepts across five logical modules, progressing naturally from basic variables to full system design.
+- 🗺️ **Interactive Learning Paths**: Master key concepts across 11 structured paths, progressing naturally from basic variables to full system design and FAANG interview preparation.
 - 💻 **Interactive CLI Dashboard**: View your progress, run, and test any day's script directly from a simple terminal-based dashboard.
-- 🌐 **Modern Interactive Web App**: Check your visual progress dashboard, read curriculum details, and explore interactive tools through a beautiful web browser interface.
+- 🌐 **Modern CSForge Web App**: Check your visual progress, play with interactive algorithm visualizers, take active recall quizzes, review flashcards, explore system architecture blueprints, and consult your streaming AI tutor.
 
 ---
 
-## 🗺️ The 5-Module Syllabus
+## 🗺️ The 11 Learning Paths
 
-The curriculum is structured into five core areas, each spanning six days:
+The curriculum is structured into 11 core areas:
 
-1. **Foundations & Basic Data Structures (Days 1–6)**  
-   *Learn how computers store and process basic information—starting with basic loops and functions, and building up to custom arrays, text search tools, recursion, and sorting algorithms.*
-
-2. **OOP & Intermediate Data Structures (Days 7–12)**  
-   *Understand how to organize code using Object-Oriented Programming (OOP) and explore core linear structures like Stacks, Queues, Hash Tables, and Binary Trees.*
-
-3. **Operating Systems & Systems Programming (Days 13–18)**  
-   *Discover how operating systems work! Build simulators for process scheduling, play with multi-threading and thread locks, and construct your own file parser and caching system.*
-
-4. **Computer Networks & Web Communication (Days 19–24)**  
-   *Demystify the internet! Write programs that communicate across sockets, create a raw web server that parses HTTP requests, and explore cryptography, security, and DNS lookups.*
-
-5. **Database Basics & Data Persistence (Days 25–30)**  
-   *Learn where and how data is saved permanently. Write database queries, understand database indices, implement a custom key-value store, and design a custom rate-limiter.*
+1. **Programming Foundations**
+2. **Object Oriented Programming**
+3. **Data Structures**
+4. **Algorithms**
+5. **Operating Systems**
+6. **Computer Networks**
+7. **Databases**
+8. **Backend Engineering**
+9. **System Design**
+10. **Interview Preparation**
+11. **Projects**
 
 ---
 
@@ -57,7 +54,7 @@ This will launch a friendly main menu where you can:
 
 ## 📂 Exploring the Code
 
-- **Daily Scripts**: You will write your daily practice code inside the `src/` folder, organized nicely by topic (e.g., `src/dsa/`, `src/os/`, `src/networks/`).
-- **Detailed Curriculum**: Open the [schedule.md](file:///D:/PycharmProjects/Training_Classic/Training/schedule.md) file at the root of the project to view the full theory guidelines, detailed daily requirements, and file paths for each of the 30 days!
+- **Daily Scripts**: Write your practice code inside the `src/` folder, organized nicely by topic (e.g., `src/dsa/`, `src/os/`, `src/networks/`).
+- **Detailed Curriculum**: Open the [schedule.md](file:///D:/PycharmProjects/Training_Classic/Training/schedule.md) file to view the full theory guidelines and daily requirements!
 
 Happy coding, and enjoy the journey! 🚀

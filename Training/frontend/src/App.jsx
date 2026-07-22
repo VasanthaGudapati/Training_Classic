@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, createContext } from 'react';
 import { ThemeProvider, createTheme, CssBaseline, Box, CircularProgress } from '@mui/material';
 import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
@@ -6,28 +6,30 @@ import PlaygroundPage from './pages/PlaygroundPage';
 import AuthPage from './pages/AuthPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
-// Create a custom premium light Material UI theme
-const lightTheme = createTheme({
+import { ColorModeContext } from './context/ColorModeContext';
+
+// Create a custom premium theme generator
+const getAppTheme = (mode) => createTheme({
   palette: {
-    mode: 'light',
+    mode,
     primary: {
-      main: '#0f172a', // Slate-900 (Bold charcoal)
-      dark: '#000000',
+      main: mode === 'light' ? '#0f172a' : '#f8fafc',
+      dark: mode === 'light' ? '#000000' : '#ffffff',
     },
     secondary: {
-      main: '#475569', // Slate-600
+      main: mode === 'light' ? '#475569' : '#94a3b8',
     },
     background: {
-      default: '#ffffff', // regular white background
-      paper: '#ffffff', // pure white card background
+      default: mode === 'light' ? '#f8fafc' : '#030712',
+      paper: mode === 'light' ? '#ffffff' : '#0f172a',
     },
     text: {
-      primary: '#0f172a', // slate-900
-      secondary: '#475569', // slate-600
-      disabled: '#94a3b8', // slate-400
+      primary: mode === 'light' ? '#0f172a' : '#f8fafc',
+      secondary: mode === 'light' ? '#475569' : '#94a3b8',
+      disabled: mode === 'light' ? '#94a3b8' : '#475569',
     },
     success: {
-      main: '#10b981', // Emerald-500
+      main: '#10b981', // Emerald
     },
     warning: {
       main: '#f59e0b',
@@ -37,11 +39,18 @@ const lightTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: "'Outfit', sans-serif",
+    fontFamily: "'Inter', sans-serif",
+    h1: { fontFamily: "'Merriweather', serif", fontWeight: 900 },
+    h2: { fontFamily: "'Merriweather', serif", fontWeight: 800 },
+    h3: { fontFamily: "'Merriweather', serif", fontWeight: 800 },
+    h4: { fontFamily: "'Merriweather', serif", fontWeight: 800 },
     h5: {
-      fontWeight: 700,
+      fontFamily: "'Merriweather', serif",
+      fontWeight: 800,
+      letterSpacing: '-0.02em',
     },
     h6: {
+      fontFamily: "'Merriweather', serif",
       fontWeight: 700,
     },
     subtitle1: {
@@ -63,7 +72,14 @@ const lightTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)',
+          backgroundImage: 'none',
+          boxShadow: mode === 'light' 
+            ? '0 10px 30px -5px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 23, 42, 0.02)'
+            : '0 10px 30px -5px rgba(0, 0, 0, 0.4), 0 4px 12px -2px rgba(0, 0, 0, 0.2)',
+          border: mode === 'light'
+            ? '1px solid rgba(15, 23, 42, 0.06)'
+            : '1px solid rgba(255, 255, 255, 0.06)',
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         },
       },
     },
@@ -155,6 +171,67 @@ function AppContent() {
         element={
           <ProtectedRoute>
             <Dashboard
+              initialView="dashboard"
+              curriculumData={curriculumData}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+              fetchStatus={fetchStatus}
+              loading={loading}
+            />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/roadmap"
+        element={
+          <ProtectedRoute>
+            <Dashboard
+              initialView="roadmap"
+              curriculumData={curriculumData}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+              fetchStatus={fetchStatus}
+              loading={loading}
+            />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/interview"
+        element={
+          <ProtectedRoute>
+            <Dashboard
+              initialView="interview"
+              curriculumData={curriculumData}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+              fetchStatus={fetchStatus}
+              loading={loading}
+            />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/projects"
+        element={
+          <ProtectedRoute>
+            <Dashboard
+              initialView="projects"
+              curriculumData={curriculumData}
+              activeFilter={activeFilter}
+              onFilterChange={setActiveFilter}
+              fetchStatus={fetchStatus}
+              loading={loading}
+            />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Dashboard
+              initialView="profile"
               curriculumData={curriculumData}
               activeFilter={activeFilter}
               onFilterChange={setActiveFilter}
@@ -183,14 +260,31 @@ function AppContent() {
 }
 
 export default function App() {
+  const [mode, setMode] = useState(() => localStorage.getItem('themeMode') || 'light');
+
+  const colorMode = useMemo(() => ({
+    toggleColorMode: () => {
+      setMode((prev) => {
+        const next = prev === 'light' ? 'dark' : 'light';
+        localStorage.setItem('themeMode', next);
+        return next;
+      });
+    },
+    mode,
+  }), [mode]);
+
+  const theme = useMemo(() => getAppTheme(mode), [mode]);
+
   return (
-    <ThemeProvider theme={lightTheme}>
-      <CssBaseline />
-      <AuthProvider>
-        <HashRouter>
-          <AppContent />
-        </HashRouter>
-      </AuthProvider>
-    </ThemeProvider>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AuthProvider>
+          <HashRouter>
+            <AppContent />
+          </HashRouter>
+        </AuthProvider>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   );
 }
