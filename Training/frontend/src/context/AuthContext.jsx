@@ -3,6 +3,17 @@ import { getToken, setToken, removeToken, parseJwt } from '../utils/auth';
 
 const AuthContext = createContext(null);
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+
+const getApiUrl = (url) => {
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  const cleanBase = API_BASE_URL.replace(/\/+$/, '');
+  const cleanPath = url.startsWith('/') ? url : `/${url}`;
+  return `${cleanBase}${cleanPath}`;
+};
+
 export function AuthProvider({ children }) {
   const [token, setTokenState] = useState(getToken());
   const [user, setUser] = useState(null);
@@ -38,7 +49,7 @@ export function AuthProvider({ children }) {
     params.append('username', email);
     params.append('password', password);
 
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch(getApiUrl('/api/auth/login'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -63,7 +74,7 @@ export function AuthProvider({ children }) {
    * Register a new user using JSON payload
    */
   const register = async (email, password) => {
-    const response = await fetch('/api/auth/register', {
+    const response = await fetch(getApiUrl('/api/auth/register'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -93,7 +104,7 @@ export function AuthProvider({ children }) {
     }
 
     const updatedOptions = { ...options, headers };
-    const response = await fetch(url, updatedOptions);
+    const response = await fetch(getApiUrl(url), updatedOptions);
 
     if (response.status === 401) {
       // Session expired or credentials invalid
