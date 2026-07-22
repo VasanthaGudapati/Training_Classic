@@ -1,2 +1,2 @@
-/api/*    https://csforge-backend.onrender.com/api/:splat   200!
+/api/*    https://training-classic.onrender.com/api/:splat   200!
 /*        /index.html                                       200
