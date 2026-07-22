@@ -1,11 +1,24 @@
 from pydantic import BaseModel, EmailStr
 from typing import List, Optional, Dict
 
-# Pydantic Config
+# Dual Pydantic v1/v2 Compatible Base Config
+class ORMConfig:
+    from_attributes = True  # Pydantic v2
+    orm_mode = True         # Pydantic v1
+
+
+# Auth Schemas
+class UserBase(BaseModel):
+    email: EmailStr
+
+class UserCreate(UserBase):
+    password: str
+
 class UserResponse(UserBase):
     id: int
-    model_config = {"from_attributes": True}
 
+    class Config(ORMConfig):
+        pass
 
 
 class Token(BaseModel):
@@ -27,7 +40,9 @@ class NoteCreate(NoteBase):
 class NoteResponse(NoteBase):
     id: int
     user_id: int
-    model_config = {"from_attributes": True}
+
+    class Config(ORMConfig):
+        pass
 
 
 # Progress Schemas
@@ -41,8 +56,9 @@ class ProgressCreate(ProgressBase):
 class ProgressResponse(ProgressBase):
     id: int
     user_id: int
-    model_config = {"from_attributes": True}
 
+    class Config(ORMConfig):
+        pass
 
 
 # Code Execution / Linting Schemas
