@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from .config import settings
 from .database import engine, Base
 from .routers import auth, curriculum
 
@@ -16,13 +17,21 @@ app = FastAPI(
 )
 
 # Enable CORS middleware
+origins = settings.ALLOWED_ORIGINS if settings.ALLOWED_ORIGINS else ["*"]
+allow_origins = ["*"] if "*" in origins else origins
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allow_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Health check endpoint for Render monitoring
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "service": "CSForge API"}
 
 # Register endpoints routers
 app.include_router(auth.router)
