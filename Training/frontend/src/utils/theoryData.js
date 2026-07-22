@@ -4,7 +4,7 @@
 
 export const THEORY_DATA = {
   0: {
-    links: [{"name": "30-Day Syllabus Guide", "url": "https://github.com/vasan/CS-30-Day-Challenge"}],
+    links: [{"name": "30-Day Syllabus Guide", "url": "https://github.com/vasan/CS-30-Day-Challenge"}, {"name": "Computer Science Roadmap (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/computer-science-projects/"}],
     concept: "Preparation involves understanding how foundations, data structures, OOP, operating systems, networks, and databases interconnect to build modern software systems. Reviewing the 5 layers equips you with a mental roadmap of the entire 30-day curriculum.",
     analogy: "Think of Day 0 as looking at a architectural master plan before laying the first brick. Understanding the layers makes the construction process intuitive.",
     complexity: "Preparation complexity: O(30 Days) learning trajectory. Dynamic outcomes: O(1) high-retention.",
@@ -31,7 +31,7 @@ layers.forEach((layer, index) => {
   },
 
   1: {
-    links: [{"name": "Python Scope & LEGB Rules", "url": "https://realpython.com/python-scope-legb-rule/"}, {"name": "JS Event Loop & Stack Frames", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop"}],
+    links: [{"name": "Python Scope & LEGB Rules", "url": "https://realpython.com/python-scope-legb-rule/"}, {"name": "JS Event Loop & Stack Frames", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop"}, {"name": "Python Functions Tutorial (Real Python)", "url": "https://realpython.com/defining-your-own-python-function/"}],
     concept: "Variables represent named memory locations. Static typing allocates fixed size on the stack, while dynamic typing stores references on the heap. Flow control directs execution using branches (conditional statements) and loops (iterative constructs). Functions encapsulate reusable blocks of code, utilizing call stack frames to track parameters, local variables, and return addresses.",
     analogy: "Think of variables as named storage boxes, loops as automated assembly lines, and functions as reusable recipes.",
     complexity: "Time Complexity: O(1) for assignments, O(N) for linear loops. Space Complexity: O(1) auxiliary.",
@@ -62,7 +62,7 @@ for i in range(-1, 2):
     ]
   },
   2: {
-    links: [{"name": "Amortized Analysis of Arrays", "url": "https://www.geeksforgeeks.org/analysis-algorithm-amortized-analysis-introduction/"}, {"name": "Dynamic Array Internals", "url": "https://en.wikipedia.org/wiki/Dynamic_array"}],
+    links: [{"name": "Amortized Analysis of Arrays", "url": "https://www.geeksforgeeks.org/analysis-algorithm-amortized-analysis-introduction/"}, {"name": "Dynamic Array Internals", "url": "https://en.wikipedia.org/wiki/Dynamic_array"}, {"name": "Dynamic Array Resizing (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/how-do-dynamic-arrays-work/"}],
     concept: "A dynamic array is a linear data structure that provides random access by storing elements in contiguous memory. When the allocated capacity is exceeded during an insertion, the array automatically resizes (typically doubling in size). This involves allocating a new larger memory block, copying all existing elements, and releasing the old block. This leads to O(1) amortized insertion but O(N) worst-case insertion.",
     analogy: "Like a concert hall that relocates to a building twice the size when tickets sell out, dynamic arrays double their capacity and copy all guests over.",
     complexity: "Lookup: O(1). Insert at End: O(1) amortized, O(N) worst-case (during resize). Space: O(N) allocation.",
@@ -87,7 +87,7 @@ console.log("Resized Array:", arr);`
     ]
   },
   3: {
-    links: [{"name": "Knuth-Morris-Pratt Search", "url": "https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/"}, {"name": "Unicode & Character Encodings", "url": "https://realpython.com/python-encodings-guide/"}],
+    links: [{"name": "Knuth-Morris-Pratt Search", "url": "https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/"}, {"name": "Unicode & Character Encodings", "url": "https://realpython.com/python-encodings-guide/"}, {"name": "Naive Substring Search (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/naive-algorithm-for-pattern-searching/"}],
     concept: "Strings are sequential arrays of characters. In many languages (like Python and Java), strings are immutable—meaning modifications create entirely new strings in memory to optimize caching and safety. Substring searching involves finding the starting index of a pattern within a text. Algorithms range from naive sliding window (O(N*M)) to advanced linear-time pattern matching like Knuth-Morris-Pratt (O(N+M)) using prefix tables.",
     analogy: "Think of a string as a static, unchangeable row of letters. In Python, you can't swap a letter in place; you must build a new string from scratch.",
     complexity: "Reverse String: O(N) Time, O(N) Space. Substring Search: O(N*M) naive, O(N+M) KMP algorithm.",
@@ -125,7 +125,7 @@ console.log(isPalindrome("racecar"));`
     ]
   },
   4: {
-    links: [{"name": "Call Stack & Stack Overflow", "url": "https://en.wikipedia.org/wiki/Call_stack"}, {"name": "Asymptotic Complexity Guide", "url": "https://www.geeksforgeeks.org/analysis-of-algorithms-set-1-asymptotic-analysis/"}],
+    links: [{"name": "Call Stack & Stack Overflow", "url": "https://en.wikipedia.org/wiki/Call_stack"}, {"name": "Asymptotic Complexity Guide", "url": "https://www.geeksforgeeks.org/analysis-of-algorithms-set-1-asymptotic-analysis/"}, {"name": "Recursion in Python (Real Python)", "url": "https://realpython.com/python-recursion/"}],
     concept: "Recursion is a programming technique where a function calls itself directly or indirectly. Every recursive function requires: (1) a Base Case to stop the recursion and prevent stack overflow, and (2) a Recursive Case that reduces the problem size. Call stack frames track each recursive invocation. Big O notation measures asymptotic time and space complexity, representing how execution time scales with input size N.",
     analogy: "Recursion is like Russian nesting dolls—you open one to find a smaller one inside, until you hit the tiny solid doll (the base case) that stops the loop.",
     complexity: "Factorial: O(N) Time, O(N) Stack Space. Fibonacci: O(2^N) Naive, O(N) Memoized.",
@@ -152,7 +152,7 @@ console.log(factorial(5));`
     ]
   },
   5: {
-    links: [{"name": "Singly Linked List Operations", "url": "https://www.geeksforgeeks.org/singly-linked-list-tutorial/"}, {"name": "Floyd's Cycle Finding Algorithm", "url": "https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/"}],
+    links: [{"name": "Singly Linked List Operations", "url": "https://www.geeksforgeeks.org/singly-linked-list-tutorial/"}, {"name": "Floyd's Cycle Finding Algorithm", "url": "https://www.geeksforgeeks.org/floyds-cycle-finding-algorithm/"}, {"name": "Singly Linked List Implementation (Real Python)", "url": "https://realpython.com/linked-lists-python/"}],
     concept: "A singly linked list is a linear data structure consisting of nodes, where each node contains a value and a pointer (reference) to the next node in the sequence. Unlike arrays, nodes are not stored contiguously in memory, allowing for dynamic insertion and deletion in O(1) time at the head, but requiring O(N) time to search or access arbitrary elements.",
     analogy: "Like a scavenger hunt, each node has a clue (value) and points to the location of the next clue (pointer). The chain ends when a clue points to nowhere (null).",
     complexity: "Access/Search: O(N). Insert/Delete at Head: O(1). Insert/Delete at Tail: O(N). Space: O(N).",
@@ -184,7 +184,7 @@ console.log(head.value, "->", head.next.value);`
     ]
   },
   6: {
-    links: [{"name": "Binary Search Detailed Guide", "url": "https://realpython.com/binary-search-python/"}, {"name": "Sorting Algorithms Visualizer", "url": "https://visualgo.net/en/sorting"}],
+    links: [{"name": "Binary Search Detailed Guide", "url": "https://realpython.com/binary-search-python/"}, {"name": "Sorting Algorithms Visualizer", "url": "https://visualgo.net/en/sorting"}, {"name": "Selection & Bubble Sort (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/selection-sort-algorithm/"}],
     concept: "Sorting arranges elements in a specific order (e.g. ascending). Bubble and Selection Sort are naive algorithms running in O(N^2) time. Search algorithms locate elements: Linear Search scans sequentially in O(N) time, whereas Binary Search repeatedly divides a sorted search range in half, achieving highly efficient O(log N) lookup speed.",
     analogy: "Linear search is like flipping through pages of a book one by one. Binary search is like opening the dictionary exactly in the middle and narrowing down your search range.",
     complexity: "Linear Search: O(N). Binary Search: O(log N). Bubble Sort: O(N^2). Space: O(1) auxiliary.",
@@ -222,7 +222,7 @@ console.log("Index of 5:", binarySearch([1, 3, 5, 7, 9], 5));`
     ]
   },
   7: {
-    links: [{"name": "4 Pillars of OOP in Python", "url": "https://realpython.com/python3-object-oriented-programming/"}, {"name": "Polymorphism in JS", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"}],
+    links: [{"name": "4 Pillars of OOP in Python", "url": "https://realpython.com/python3-object-oriented-programming/"}, {"name": "Polymorphism in JS", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"}, {"name": "4 Pillars of OOP Concepts (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/four-simple-principles-of-oop-object-oriented-programming-concepts/"}],
     concept: "Object-Oriented Programming (OOP) is a paradigm based on 'objects' containing data and methods. Its four pillars are: (1) Encapsulation (hiding internal state via private variables), (2) Abstraction (hiding complexity behind simple interfaces), (3) Inheritance (subclasses sharing parent traits), and (4) Polymorphism (allowing subclasses to override parent methods dynamically).",
     analogy: "Think of a class as a blue-print for a car, and an object as the actual physical car built from that blueprint. Inheritance allows you to build an ElectricCar subclass inheriting characteristics from the base Car class.",
     complexity: "Instantiation: O(1) in time and memory. Method Calls: O(1) invocation overhead.",
@@ -255,7 +255,7 @@ console.log(d.speak());`
     ]
   },
   8: {
-    links: [{"name": "LIFO Stacks & FIFO Queues", "url": "https://realpython.com/queue-in-python/"}, {"name": "Stack Brackets Matching", "url": "https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/"}],
+    links: [{"name": "LIFO Stacks & FIFO Queues", "url": "https://realpython.com/queue-in-python/"}, {"name": "Stack Brackets Matching", "url": "https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/"}, {"name": "Balanced Brackets Matcher (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/"}],
     concept: "Stacks and Queues are restricted linear structures. A Stack follows the Last-In, First-Out (LIFO) protocol, supporting push and pop operations at a single end. A Queue follows the First-In, First-Out (FIFO) protocol, supporting enqueue at the tail and dequeue at the head. Both can be built using dynamic arrays or linked lists.",
     analogy: "A stack is like a pile of cafeteria trays—you take from the top (LIFO). A queue is like a checkout line—the first customer who arrives is served first (FIFO).",
     complexity: "Push/Pop/Enqueue/Dequeue: O(1) time. Space: O(N) relative to elements.",
@@ -288,7 +288,7 @@ console.log(queue.shift()); // Dequeue -> A`
     ]
   },
   9: {
-    links: [{"name": "Hash Functions & Collision resolution", "url": "https://en.wikipedia.org/wiki/Hash_table"}, {"name": "HashMap Chain probing", "url": "https://www.geeksforgeeks.org/open-addressing-collision-handling-technique-in-hashing/"}],
+    links: [{"name": "Hash Functions & Collision resolution", "url": "https://en.wikipedia.org/wiki/Hash_table"}, {"name": "HashMap Chain probing", "url": "https://www.geeksforgeeks.org/open-addressing-collision-handling-technique-in-hashing/"}, {"name": "Custom Hash Table Design (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/hash-map-in-python/"}],
     concept: "A Hash Table maps keys to values using a Hash Function, which converts arbitrary keys into integer array indexes in O(1) average time. When two keys hash to the same index, a Collision occurs. Resolution strategies include Chaining (maintaining linked lists at each index) and Open Addressing (probing subsequent empty indexes linearly or quadratically).",
     analogy: "Think of a coat check counter. You give them your coat (key), they hand you a numbered ticket (hash value). When you want your coat, they use the number to instantly find the slot.",
     complexity: "Insert/Search/Delete: O(1) average-case, O(N) worst-case (during collision clusters). Space: O(N).",
@@ -309,7 +309,7 @@ console.log(hashTable.get("username"));`
     ]
   },
   10: {
-    links: [{"name": "Binary Tree Recursive Traversals", "url": "https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/"}, {"name": "DF traversals vs BF traversals", "url": "https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/"}],
+    links: [{"name": "Binary Tree Recursive Traversals", "url": "https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/"}, {"name": "DF traversals vs BF traversals", "url": "https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/"}, {"name": "Binary Tree Traversals (Real Python)", "url": "https://realpython.com/python-binary-tree/"}],
     concept: "A Binary Tree is a hierarchical structure where each node has at most two children (left and right). Recursive tree traversals visit all nodes systematically: (1) Pre-order (Parent, Left, Right), (2) In-order (Left, Parent, Right—which visits sorted elements in a BST), and (3) Post-order (Left, Right, Parent).",
     analogy: "A family tree is a classic binary tree—you have parents and children. Pre-order is like visiting the head of the household first, In-order is visiting siblings from left to right.",
     complexity: "Traversals: O(N) Time (visits every node), O(H) Stack Space (where H is the tree height).",
@@ -343,7 +343,7 @@ console.log("Root:", root.value, "Left Child:", root.left.value);`
     ]
   },
   11: {
-    links: [{"name": "BST Insert and Search Guide", "url": "https://www.geeksforgeeks.org/binary-search-tree-data-structure/"}, {"name": "BST Validation checking", "url": "https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/"}],
+    links: [{"name": "BST Insert and Search Guide", "url": "https://www.geeksforgeeks.org/binary-search-tree-data-structure/"}, {"name": "BST Validation checking", "url": "https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/"}, {"name": "Binary Search Tree Basics (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/binary-search-tree-data-structure/"}],
     concept: "A Binary Search Tree (BST) is a binary tree with the ordering property: for any node, all keys in its left subtree are smaller, and all keys in its right subtree are larger. This structure enables O(log N) average search, insertion, and deletion. However, if keys are inserted in sorted order, the tree degenerates into a linear chain, degrading speeds to O(N).",
     analogy: "Like sorting files in a filing cabinet, a BST keeps all smaller files on the left and larger files on the right, allowing you to instantly throw out half the drawer on every search step.",
     complexity: "Insert/Search/Delete: O(log N) average, O(N) worst-case (in unbalanced, degenerate/skewed trees). Space: O(N).",
@@ -367,7 +367,7 @@ console.log("Root:", root.value, "Left Child:", root.left.value);`
     ]
   },
   12: {
-    links: [{"name": "Graph Adjacency Lists representation", "url": "https://www.geeksforgeeks.org/graph-and-its-representations/"}, {"name": "Breadth First Search (BFS)", "url": "https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/"}],
+    links: [{"name": "Graph Adjacency Lists representation", "url": "https://www.geeksforgeeks.org/graph-and-its-representations/"}, {"name": "Breadth First Search (BFS)", "url": "https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/"}, {"name": "Breadth First Search (BFS) Visualisation", "url": "https://visualgo.net/en/dfsbfs"}],
     concept: "A Graph represents network structures consisting of Vertices (nodes) and Edges (connections). Graphs are represented using Adjacency Matrices (O(V^2) space) or Adjacency Lists (O(V+E) space). Breadth-First Search (BFS) is a level-order traversal using a queue to visit neighbors layer-by-layer, making it ideal for finding the shortest path in unweighted graphs.",
     analogy: "A graph is a social network—vertices are people and edges are friendships. BFS is like broadcasting news: first you tell your immediate friends, then they tell their friends, spreading outwards in waves.",
     complexity: "Representation: Adjacency List O(V + E) space. Traversal: O(V + E) time. V = Vertices, E = Edges.",
@@ -395,7 +395,7 @@ console.log("Neighbors of B:", graph.B);`
     ]
   },
   13: {
-    links: [{"name": "Python File Stream Handling", "url": "https://realpython.com/read-write-files-python/"}, {"name": "Robust Exception Handling Guide", "url": "https://realpython.com/python-exceptions/"}],
+    links: [{"name": "Python File Stream Handling", "url": "https://realpython.com/read-write-files-python/"}, {"name": "Robust Exception Handling Guide", "url": "https://realpython.com/python-exceptions/"}, {"name": "Python Context Managers (Real Python)", "url": "https://realpython.com/python-with-statement/"}],
     concept: "File I/O operates on external disk storage. Robust systems utilize stream buffers to read files line-by-line rather than loading whole files into RAM, preventing memory exhaustion. Exception handling (try/except blocks) catches runtime failures (e.g., missing files, permission errors) gracefully to prevent application crashes.",
     analogy: "Think of checking passports at border control. You don't halt the whole line if one passport is invalid (crashing); you write down the issue (logging errors) and process the next person.",
     complexity: "Parsing: O(N) time where N is file character length, O(1) memory if processed as line streams.",
@@ -418,7 +418,7 @@ except FileNotFoundError as e:
     ]
   },
   14: {
-    links: [{"name": "CPU Scheduling Algorithms Overview", "url": "https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/"}, {"name": "Round Robin (RR) Scheduling", "url": "https://www.geeksforgeeks.org/program-round-robin-scheduling-set-1/"}],
+    links: [{"name": "CPU Scheduling Algorithms Overview", "url": "https://www.geeksforgeeks.org/cpu-scheduling-in-operating-systems/"}, {"name": "Round Robin (RR) Scheduling", "url": "https://www.geeksforgeeks.org/program-round-robin-scheduling-set-1/"}, {"name": "First-Come First-Served Scheduling (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/program-for-fcfs-cpu-scheduling/"}],
     concept: "CPU Scheduling is the process by which the OS decides which process runs on the CPU. First-Come, First-Served (FCFS) schedules tasks in arrival order but suffers from the Convoy Effect (short jobs waiting behind long ones). Round Robin (RR) schedules tasks periodically using fixed time slices (quanta), ensuring fair time sharing.",
     analogy: "A scheduler is like a bank teller: FCFS serves whoever got in line first. Round Robin is like a busy card dealer giving one card (time slice) to each player in turn around the table.",
     complexity: "FCFS: O(N log N) sorting by arrival time, O(1) scheduling per process. Space: O(N).",
@@ -438,7 +438,7 @@ console.log("Total scheduling CPU burst times:", total);`
     ]
   },
   15: {
-    links: [{"name": "Python Threading Concurrency", "url": "https://realpython.com/intro-to-python-threading/"}, {"name": "Global Interpreter Lock (GIL)", "url": "https://realpython.com/python-gil/"}],
+    links: [{"name": "Python Threading Concurrency", "url": "https://realpython.com/intro-to-python-threading/"}, {"name": "Global Interpreter Lock (GIL)", "url": "https://realpython.com/python-gil/"}, {"name": "Python Multithreading Guide (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/multithreading-python/"}],
     concept: "Multi-threading allows a single process to execute multiple concurrent paths of execution inside the same shared memory space. This is lightweight compared to spawning separate processes but introduces concurrency complexities. Due to Python's Global Interpreter Lock (GIL), only one thread can execute bytecode at a time, making threading best for I/O-bound tasks.",
     analogy: "Threads are like multiple cooks in the same kitchen sharing the same ingredients (process memory). If they don't coordinate, they will bump into each other and spoil the soup.",
     complexity: "Thread creation: low-overhead. Execution: managed by the OS scheduler (non-deterministic order).",
@@ -465,7 +465,7 @@ console.log("End");`
     ]
   },
   16: {
-    links: [{"name": "Thread Synchronization & Locks", "url": "https://realpython.com/intro-to-python-threading/#producer-consumer-threading"}, {"name": "Preventing Data Race Conditions", "url": "https://en.wikipedia.org/wiki/Race_condition"}],
+    links: [{"name": "Thread Synchronization & Locks", "url": "https://realpython.com/intro-to-python-threading/#producer-consumer-threading"}, {"name": "Preventing Data Race Conditions", "url": "https://en.wikipedia.org/wiki/Race_condition"}, {"name": "Thread Locks in Python (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/use-locks-to-prevent-race-conditions-in-python-multithreading/"}],
     concept: "Thread Synchronization manages concurrent access to shared resources to prevent Data Races (where multiple threads modify a variable simultaneously, causing corrupt state). Mutual Exclusion (Mutex/Locks) ensures only one thread enters a Critical Section at a time, blocking other threads until the lock is released.",
     analogy: "Think of a single-occupancy restroom. The lock on the door (Mutex/Lock) guarantees that only one person (thread) can use it at a time, preventing awkward collisions.",
     complexity: "Lock Overhead: O(1) context check, but causes thread waiting/blocking if contention is high.",
@@ -504,7 +504,7 @@ class Mutex {
     ]
   },
   17: {
-    links: [{"name": "Caching Strategies (FIFO vs LRU)", "url": "https://en.wikipedia.org/wiki/Cache_replacement_policies"}, {"name": "Python functools.lru_cache", "url": "https://realpython.com/lru-cache-python/"}],
+    links: [{"name": "Caching Strategies (FIFO vs LRU)", "url": "https://en.wikipedia.org/wiki/Cache_replacement_policies"}, {"name": "Python functools.lru_cache", "url": "https://realpython.com/lru-cache-python/"}, {"name": "FIFO Cache Replacement (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/fifo-first-in-first-out-cache-page-replacement-algorithm/"}],
     concept: "Caching stores copy of active data in high-speed memory to accelerate retrieval. Cache replacement schemes determine which resource to evict when capacity is full. First-In, First-Out (FIFO) evicts the oldest cached resource, while Least Recently Used (LRU) evicts the resource that hasn't been accessed for the longest time.",
     analogy: "Think of an inbox tray that can only hold 3 papers. When a 4th paper arrives, you throw away the very first paper that entered the tray, regardless of how often you read it.",
     complexity: "Cache Put/Get: O(1) using linked lists and dictionaries. Space: O(Capacity).",
@@ -546,7 +546,7 @@ accessPage("Profile"); // Evicts Home`
     ]
   },
   18: {
-    links: [{"name": "Lossless Run-Length Encoding (RLE)", "url": "https://en.wikipedia.org/wiki/Run-length_encoding"}, {"name": "Data Compression algorithms", "url": "https://www.geeksforgeeks.org/run-length-encoding/"}],
+    links: [{"name": "Lossless Run-Length Encoding (RLE)", "url": "https://en.wikipedia.org/wiki/Run-length_encoding"}, {"name": "Data Compression algorithms", "url": "https://www.geeksforgeeks.org/run-length-encoding/"}, {"name": "Run Length Encoding in Python (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/run-length-encoding-in-python/"}],
     concept: "File compression reduces storage requirements. Run-Length Encoding (RLE) is a lossless compression algorithm that replaces consecutive repeating data sequences (runs) with a single data value and its repeat count. It is highly efficient for data containing long runs of identical values but can increase file size for highly varied data.",
     analogy: "If you have a shopping list that says 'Apple, Apple, Apple, Banana', you compress it by saying '3 Apples, 1 Banana'. This is Run-Length Encoding.",
     complexity: "Compression/Decompression: O(N) Time. Space: O(N) worst-case (when no consecutive repeating characters exist).",
@@ -583,7 +583,7 @@ console.log(rleDecompress("3A2B1C"));`
     ]
   },
   19: {
-    links: [{"name": "Socket Programming in Python", "url": "https://realpython.com/python-sockets/"}, {"name": "TCP vs UDP socket bindings", "url": "https://www.geeksforgeeks.org/differences-between-tcp-and-udp/"}],
+    links: [{"name": "Socket Programming in Python", "url": "https://realpython.com/python-sockets/"}, {"name": "TCP vs UDP socket bindings", "url": "https://www.geeksforgeeks.org/differences-between-tcp-and-udp/"}, {"name": "TCP Client-Server Communication (Real Python)", "url": "https://realpython.com/python-sockets/"}],
     concept: "Sockets are endpoint interfaces for network communication over TCP/IP or UDP. A server socket binds to an IP and port, listens for incoming connection requests, and accepts sessions. A client socket connects to the server. Data is transmitted as raw byte streams, requiring explicit encoding (e.g., UTF-8) and protocol handling.",
     analogy: "Like a landline telephone system: binding is assigning a phone number to a wall jack, listening is waiting for the phone to ring, and accepting is picking up the receiver.",
     complexity: "Connection creation: O(1). Byte transfers: O(Bytes / Bandwidth). Network latency overhead applies.",
@@ -601,7 +601,7 @@ console.log("Established raw TCP network communication ports.");`
     ]
   },
   20: {
-    links: [{"name": "Sequential vs Concurrent Sockets", "url": "https://www.geeksforgeeks.org/socket-programming-in-cc-handling-multiple-clients-on-server-without-multi-threading/"}, {"name": "Select/Epoll Socket Multiplexing", "url": "https://realpython.com/python-sockets/#handling-multiple-connections"}],
+    links: [{"name": "Sequential vs Concurrent Sockets", "url": "https://www.geeksforgeeks.org/socket-programming-in-cc-handling-multiple-clients-on-server-without-multi-threading/"}, {"name": "Select/Epoll Socket Multiplexing", "url": "https://realpython.com/python-sockets/#handling-multiple-connections"}, {"name": "Handling Multiple Clients with Threads (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/socket-programming-multi-threading-python/"}],
     concept: "Standard single-threaded socket servers handle clients sequentially using a loop. When a client connects, the server blocks other incoming client connections until the current session is closed. To handle multiple concurrent client sessions without blocking, servers must utilize multi-threading, multi-processing, or asynchronous event loops.",
     analogy: "A small shop with one cashier: when a customer is checkout, others must wait outside. As soon as the customer leaves, the cashier serves the next person in line.",
     complexity: "Loop throughput: O(1) serving, but blocks other clients for indefinite periods.",
@@ -618,7 +618,7 @@ console.log("Connection processed. Listening for next socket sequence...");`
     ]
   },
   21: {
-    links: [{"name": "HTTP Request Response Spec", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"}, {"name": "Raw Socket Web Servers", "url": "https://realpython.com/python-sockets/#web-servers-and-socket-programming"}],
+    links: [{"name": "HTTP Request Response Spec", "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"}, {"name": "Raw Socket Web Servers", "url": "https://realpython.com/python-sockets/#web-servers-and-socket-programming"}, {"name": "Python http.server Library (Python Docs)", "url": "https://docs.python.org/3/library/http.server.html"}],
     concept: "The Hypertext Transfer Protocol (HTTP) is a stateless, text-based application protocol. An HTTP request consists of a request line (Method, Path, Version), headers, and an optional body. The server processes this request and returns an HTTP response starting with a status line (e.g., HTTP/1.1 200 OK) followed by headers and the page content.",
     analogy: "HTTP is like a restaurant order: the client (diner) sends a Request (menu selection), the server (kitchen) processes it and returns a Response (the food plate).",
     complexity: "Routing/Parsing: O(Request Size) time, O(Response Body) space.",
@@ -642,7 +642,7 @@ console.log(status + headers + body);`
     ]
   },
   22: {
-    links: [{"name": "REST API Architecture Principles", "url": "https://restfulapi.net/"}, {"name": "JSON Serialization in Python", "url": "https://realpython.com/python-json/"}],
+    links: [{"name": "REST API Architecture Principles", "url": "https://restfulapi.net/"}, {"name": "JSON Serialization in Python", "url": "https://realpython.com/python-json/"}, {"name": "FastAPI APIs Tutorial (Real Python)", "url": "https://realpython.com/fastapi-python-web-apis/"}],
     concept: "REST (Representational State Transfer) is an architectural style for design APIs using standard HTTP methods: GET (read), POST (create), PUT (update), and DELETE (delete). REST APIs serialize payloads in JSON (JavaScript Object Notation), a lightweight, text-based data-interchange format easily parsed by modern web applications.",
     analogy: "Like a librarian at the desk: GET fetches a book from shelves, POST registers a new book, PUT updates its cover, and DELETE removes it from catalog.",
     complexity: "JSON Parse/Stringify: O(N) where N is string length. Router mapping: O(1) or O(Routes).",
@@ -666,7 +666,7 @@ console.log("Decoded:", JSON.parse(jsonString).status);`
     ]
   },
   23: {
-    links: [{"name": "DNS Name Resolution Mechanics", "url": "https://www.cloudflare.com/learning/dns/what-is-dns/"}, {"name": "Reverse DNS Lookup Guide", "url": "https://en.wikipedia.org/wiki/Reverse_DNS_lookup"}],
+    links: [{"name": "DNS Name Resolution Mechanics", "url": "https://www.cloudflare.com/learning/dns/what-is-dns/"}, {"name": "Reverse DNS Lookup Guide", "url": "https://en.wikipedia.org/wiki/Reverse_DNS_lookup"}, {"name": "Host Name Resolution socket.gethostbyname (Python Docs)", "url": "https://docs.python.org/3/library/socket.html#socket.gethostbyname"}],
     concept: "The Domain Name System (DNS) is the phone book of the Internet, translating human-readable hostnames (e.g., google.com) into machine-readable IP addresses (e.g., 142.250.190.46). Lookups query a hierarchical tree of nameservers (Root, TLD, Authoritative) and utilize client-side caching to minimize latency.",
     analogy: "Like a phone book directory: you look up 'John Doe' (domain name) to find his phone number (IP address), since numbers are hard to remember but names are easy.",
     complexity: "Network lookup: O(1) if cached, otherwise depends on DNS server network hops latency.",
@@ -686,7 +686,7 @@ console.log("DNS Host Lookup: resolved 'google.com' -> '142.250.190.46'");`
     ]
   },
   24: {
-    links: [{"name": "Cryptographic SHA-256 Hash", "url": "https://en.wikipedia.org/wiki/SHA-2"}, {"name": "Password Salting Best Practices", "url": "https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/"}],
+    links: [{"name": "Cryptographic SHA-256 Hash", "url": "https://en.wikipedia.org/wiki/SHA-2"}, {"name": "Password Salting Best Practices", "url": "https://auth0.com/blog/adding-salt-to-hashing-a-better-way-to-store-passwords/"}, {"name": "Password Hashing & Salting (Real Python)", "url": "https://realpython.com/python-hashlib/"}],
     concept: "Hashing algorithms (like SHA-256) generate a fixed-size cryptographic signature from arbitrary input data, working as a one-way function that cannot be reversed. To prevent rainbow table cracking, password security systems add a unique, random string (Salt) to the password before hashing, creating unique hashes for identical passwords.",
     analogy: "A hash is like a meat grinder: you can grind meat into sausage (hash), but you can't turn the sausage back into a cow. Salt is adding a secret spice to the meat before grinding, so no two sausages look alike.",
     complexity: "SHA-256 Hashing: O(Byte Length) execution speed. Decryption: O(Infinity) (mathematically impossible).",
@@ -705,7 +705,7 @@ console.log("Alice Hash:", hashStr);`
     ]
   },
   25: {
-    links: [{"name": "Relational Databases & SQL syntax", "url": "https://www.w3schools.com/sql/"}, {"name": "ACID Database Transaction Rules", "url": "https://en.wikipedia.org/wiki/ACID"}],
+    links: [{"name": "Relational Databases & SQL syntax", "url": "https://www.w3schools.com/sql/"}, {"name": "ACID Database Transaction Rules", "url": "https://en.wikipedia.org/wiki/ACID"}, {"name": "sqlite3 Data Management (Real Python)", "url": "https://realpython.com/data-management-python-sqlite/"}],
     concept: "Relational Database Management Systems (RDBMS) organize data into structured tables consisting of rows and columns. They use Structured Query Language (SQL) to declare and manipulate data, providing robust ACID (Atomicity, Consistency, Isolation, Durability) guarantees that ensure reliable transaction processing.",
     analogy: "A relational database is like a collection of spreadsheets (tables) with columns (fields) and rows (records), where columns link spreadsheets together.",
     complexity: "Insertion: O(1). Selection without Index: O(N) scan. Selection with Index: O(log N) or O(1).",
@@ -728,7 +728,7 @@ console.log("User Row:", users[0]);`
     ]
   },
   26: {
-    links: [{"name": "SQL INNER vs LEFT JOINs", "url": "https://www.w3schools.com/sql/sql_join.asp"}, {"name": "Foreign Key constraints guide", "url": "https://www.w3schools.com/sql/sql_foreignkey.asp"}],
+    links: [{"name": "SQL INNER vs LEFT JOINs", "url": "https://www.w3schools.com/sql/sql_join.asp"}, {"name": "Foreign Key constraints guide", "url": "https://www.w3schools.com/sql/sql_foreignkey.asp"}, {"name": "SQL INNER JOIN Lesson (SQLBolt)", "url": "https://sqlbolt.com/lesson/select_queries_with_joins"}],
     concept: "Relational database tables are linked using Primary Keys (unique row identifiers) and Foreign Keys (references to columns in other tables). SQL JOIN operations dynamically combine rows from two or more tables based on matching key values, supporting INNER, LEFT, RIGHT, and FULL outer join types.",
     analogy: "A student table has students, and a grades table has grades. A join binds them by matching student ID columns, showing you student names alongside their test grades.",
     complexity: "Nested Loop Join: O(N*M). Index-based Hash Join: O(N + M). Space: O(Join Output).",
@@ -748,7 +748,7 @@ console.log("Relations joined via primary/foreign key connections.");`
     ]
   },
   27: {
-    links: [{"name": "Database B-Tree Indexing", "url": "https://en.wikipedia.org/wiki/Database_index"}, {"name": "B-Tree data structures visualization", "url": "https://www.geeksforgeeks.org/b-tree-set-1-introduction-2/"}],
+    links: [{"name": "Database B-Tree Indexing", "url": "https://en.wikipedia.org/wiki/Database_index"}, {"name": "B-Tree data structures visualization", "url": "https://www.geeksforgeeks.org/b-tree-set-1-introduction-2/"}, {"name": "Database Indexing Benefits (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/indexing-in-databases/"}],
     concept: "A database index is a auxiliary data structure (typically a B-Tree or Hash Index) that optimizes query performance by allowing the database engine to locate records without scanning the entire table (Sequential Scan). While indexing accelerates SELECT queries from O(N) to O(log N) or O(1), it incurs write overhead on INSERT/UPDATE/DELETE actions.",
     analogy: "Indexing is like the index at the back of a textbook: instead of reading all 500 pages (linear scan) to find 'DNS', you look at the index to find exactly page 123 (indexed lookup).",
     complexity: "Sequential Scan: O(N) time. Indexed Lookup: O(log N) for B-Trees, O(1) for Hash Indices.",
@@ -767,7 +767,7 @@ console.log("Instant lookup for Bob:", lookupIndex.get("Bob"));`
     ]
   },
   28: {
-    links: [{"name": "Key-Value Append Log Engines", "url": "https://en.wikipedia.org/wiki/Key%E2%80%93value_database"}, {"name": "Log-Structured Merge (LSM) Trees", "url": "https://en.wikipedia.org/wiki/Log-structured_merge-tree"}],
+    links: [{"name": "Key-Value Append Log Engines", "url": "https://en.wikipedia.org/wiki/Key%E2%80%93value_database"}, {"name": "Log-Structured Merge (LSM) Trees", "url": "https://en.wikipedia.org/wiki/Log-structured_merge-tree"}, {"name": "Key-Value Stores (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/what-is-a-key-value-database/"}],
     concept: "A Key-Value store is a non-relational database engine that stores data as an associative array of keys and values. In high-performance systems, data is persisted to disk using an append-only transaction log (Write-Ahead Log) for durability, combined with in-memory indexes (like Hash Maps) to deliver extremely fast read and write throughput.",
     analogy: "A Key-Value store is like a locker room: each locker has a number (key) and holds your bag (value). You don't need tables or columns—just the locker number.",
     complexity: "Get/Put: O(1) memory lookup, O(1) file append/write duration. Space: O(Key Size).",
@@ -786,7 +786,7 @@ console.log("Accessing Key:", kvStore.session_token);`
     ]
   },
   29: {
-    links: [{"name": "Model View Controller (MVC)", "url": "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"}, {"name": "Separation of Concerns Principle", "url": "https://en.wikipedia.org/wiki/Separation_of_concerns"}],
+    links: [{"name": "Model View Controller (MVC)", "url": "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller"}, {"name": "Separation of Concerns Principle", "url": "https://en.wikipedia.org/wiki/Separation_of_concerns"}, {"name": "MVC Pattern Explained (FreeCodeCamp)", "url": "https://www.freecodecamp.org/news/the-mvc-pattern-explained/"}],
     concept: "The Model-View-Controller (MVC) is a software design pattern that decouples application concerns into three layers: (1) Model manages data state and business logic, (2) View renders the user interface presentation, and (3) Controller translates user inputs and coordinates updates between Model and View.",
     analogy: "A restaurant: Model is the pantry (data), View is the plate presentation (display), and Controller is the waiter (routes orders and coordinates details).",
     complexity: "MVC setup overhead: O(N) structural complexity, but simplifies modification time to O(1).",
@@ -805,7 +805,7 @@ console.log("Separation established: View rendering inputs decoupled from Model 
     ]
   },
   30: {
-    links: [{"name": "Token Bucket Rate Limiting", "url": "https://en.wikipedia.org/wiki/Token_bucket"}, {"name": "Leaky Bucket Traffic Shaping", "url": "https://en.wikipedia.org/wiki/Leaky_bucket"}],
+    links: [{"name": "Token Bucket Rate Limiting", "url": "https://en.wikipedia.org/wiki/Token_bucket"}, {"name": "Leaky Bucket Traffic Shaping", "url": "https://en.wikipedia.org/wiki/Leaky_bucket"}, {"name": "Token Bucket Rate Limiting (GeeksforGeeks)", "url": "https://www.geeksforgeeks.org/token-bucket-algorithm/"}],
     concept: "Rate Limiting is a system security mechanism that controls the frequency of requests a client can make to a server, protecting resources from denial-of-service (DoS) attacks and brute-force API scraping. Common algorithms include the Token Bucket (allowing bursts) and the Leaky Bucket (smooth constant rate).",
     analogy: "A bucket holds a maximum of 5 water tokens. Water refills at 1 token per second. Every time you make an API request, you take 1 token. If the bucket is empty, you must wait for it to refill.",
     complexity: "Token verification check: O(1) time. Memory state overhead: O(User Size) index maps.",

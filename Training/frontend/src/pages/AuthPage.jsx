@@ -182,14 +182,14 @@ export default function AuthPage() {
             <Typography
               variant="h5"
               sx={{
-                fontWeight: 800,
-                color: '#0f172a',
-                letterSpacing: '-0.02em',
+                fontWeight: 900,
+                color: '#4f46e5', // Primary Indigo
+                letterSpacing: '-0.03em',
                 textAlign: 'center',
-                fontFamily: "'Outfit', sans-serif",
+                fontFamily: "'Merriweather', serif",
               }}
             >
-              CORE CS REVISION
+              CSForge
             </Typography>
             <Typography
               variant="body2"
@@ -197,10 +197,10 @@ export default function AuthPage() {
                 color: 'text.secondary',
                 mt: 0.5,
                 textAlign: 'center',
-                fontWeight: 500,
+                fontWeight: 600,
               }}
             >
-              Unlock your 30-Day Practical Revision Program
+              Forge Your Computer Science Career
             </Typography>
           </Box>
 

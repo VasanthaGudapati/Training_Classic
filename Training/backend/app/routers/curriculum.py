@@ -70,10 +70,12 @@ def get_curriculum_status(
         file_path = item["path"]
         exists = os.path.exists(file_path) if file_path else False
         
-        # Symmetrical database-disk merge completion logic
-        completed = exists
-        if current_user and day in user_progress_map:
-            completed = user_progress_map[day]
+        # Symmetrical database-disk merge completion logic: prioritize database status when authenticated
+        if current_user:
+            completed = user_progress_map.get(day, False)
+        else:
+            completed = exists
+
 
         status_data[day] = {
             "title": item["title"],
@@ -85,6 +87,32 @@ def get_curriculum_status(
         }
         
     return status_data
+
+
+@router.post("/progress", response_model=schemas.ProgressResponse)
+def toggle_progress(
+    payload: schemas.ProgressCreate,
+    db: Session = Depends(get_db),
+    current_user: models.User = Depends(auth.get_current_user)
+):
+    db_progress = db.query(models.DayProgress).filter(
+        models.DayProgress.user_id == current_user.id,
+        models.DayProgress.day == payload.day
+    ).first()
+    
+    if db_progress:
+        db_progress.completed = payload.completed
+    else:
+        db_progress = models.DayProgress(
+            day=payload.day,
+            completed=payload.completed,
+            user_id=current_user.id
+        )
+        db.add(db_progress)
+        
+    db.commit()
+    db.refresh(db_progress)
+    return db_progress
 
 
 @router.get("/notes")
@@ -172,6 +200,7 @@ def execute_playground_sandbox(
     try:
         result = subprocess.run(
             [sys.executable, temp_file],
+            stdin=subprocess.DEVNULL,
             capture_output=True,
             text=True,
             timeout=10

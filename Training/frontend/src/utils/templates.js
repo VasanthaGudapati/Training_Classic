@@ -31,9 +31,20 @@ def guessing_game(target, guess):
         return "Too High"
     return "Correct!"
 
-print(guessing_game(42, 30))
-print(guessing_game(42, 50))
-print(guessing_game(42, 42))
+print("Guessing game test cases:")
+print("Guess 30:", guessing_game(42, 30))
+print("Guess 50:", guessing_game(42, 50))
+print("Guess 42:", guessing_game(42, 42))
+
+# --- Sample Test Cases ---
+print("\n[Sample Tests] Running verification...")
+try:
+    assert guessing_game(100, 50) == "Too Low", "Failed with low guess"
+    assert guessing_game(100, 150) == "Too High", "Failed with high guess"
+    assert guessing_game(100, 100) == "Correct!", "Failed with correct guess"
+    print("✅ All sample tests passed successfully!")
+except AssertionError as e:
+    print(f"❌ Test failed: {e}")
 `,
     2: `# Day 02: Dynamic Arrays & Array Resizing
 class SimpleDynamicArray:
@@ -61,6 +72,16 @@ arr.append("Playground")
 print("Size:", arr.size)
 print("Capacity:", arr.capacity)
 print("Data:", arr.data)
+
+# --- Sample Test Cases ---
+print("\n[Sample Tests] Running verification...")
+try:
+    assert arr.size == 3, f"Expected size 3, got {arr.size}"
+    assert arr.capacity == 4, f"Expected capacity 4, got {arr.capacity}"
+    assert arr.data[0] == "Core" and arr.data[2] == "Playground", "Elements not matching expectations"
+    print("✅ All sample tests passed successfully!")
+except AssertionError as e:
+    print(f"❌ Test failed: {e}")
 `,
     3: `# Day 03: Strings & Substring Searching
 def is_palindrome(text):
@@ -76,6 +97,16 @@ def is_palindrome(text):
 
 print("is 'radar' palindrome?", is_palindrome("radar"))
 print("is 'hello' palindrome?", is_palindrome("hello"))
+
+# --- Sample Test Cases ---
+print("\n[Sample Tests] Running verification...")
+try:
+    assert is_palindrome("A man, a plan, a canal: Panama") is True, "Failed for phrase"
+    assert is_palindrome("raceacar") is False, "Failed for non-palindrome"
+    assert is_palindrome("") is True, "Failed for empty string"
+    print("✅ All sample tests passed successfully!")
+except AssertionError as e:
+    print(f"❌ Test failed: {e}")
 `,
     4: `# Day 04: Recursion & Complexity Basics (Big O)
 import time
@@ -90,6 +121,16 @@ start = time.time()
 result = recursive_fibonacci(10)
 end = time.time()
 print(f"Fibonacci(10) = {result} (Took {(end-start)*1000:.4f} ms)")
+
+# --- Sample Test Cases ---
+print("\n[Sample Tests] Running verification...")
+try:
+    assert recursive_fibonacci(0) == 0, "Fib(0) should be 0"
+    assert recursive_fibonacci(1) == 1, "Fib(1) should be 1"
+    assert recursive_fibonacci(6) == 8, "Fib(6) should be 8"
+    print("✅ All sample tests passed successfully!")
+except AssertionError as e:
+    print(f"❌ Test failed: {e}")
 `,
     5: `# Day 05: Singly Linked Lists
 class Node:
@@ -114,11 +155,27 @@ class SinglyLinkedList:
           curr = curr.next
         print(" -> ".join(elements) + " -> None")
 
+    def to_list(self):
+        curr = self.head
+        res = []
+        while curr:
+            res.append(curr.value)
+            curr = curr.next
+        return res
+
 sll = SinglyLinkedList()
 sll.insert_head(30)
 sll.insert_head(20)
 sll.insert_head(10)
 sll.display()
+
+# --- Sample Test Cases ---
+print("\n[Sample Tests] Running verification...")
+try:
+    assert sll.to_list() == [10, 20, 30], f"Expected [10, 20, 30], got {sll.to_list()}"
+    print("✅ All sample tests passed successfully!")
+except AssertionError as e:
+    print(f"❌ Test failed: {e}")
 `,
     6: `# Day 06: Basic Search & Sorting
 def bubble_sort(arr):
@@ -131,6 +188,16 @@ def bubble_sort(arr):
 
 test = [64, 34, 25, 12, 22, 11, 90]
 print("Sorted array:", bubble_sort(test))
+
+# --- Sample Test Cases ---
+print("\n[Sample Tests] Running verification...")
+try:
+    assert bubble_sort([5, 1, 4, 2, 8]) == [1, 2, 4, 5, 8], "Failed to sort list"
+    assert bubble_sort([]) == [], "Failed empty list"
+    assert bubble_sort([1]) == [1], "Failed single element list"
+    print("✅ All sample tests passed successfully!")
+except AssertionError as e:
+    print(f"❌ Test failed: {e}")
 `,
     7: `# Day 07: Object-Oriented Programming (OOP) Basics
 class BankAccount:

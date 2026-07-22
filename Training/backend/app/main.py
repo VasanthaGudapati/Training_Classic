@@ -10,8 +10,8 @@ from .routers import auth, curriculum
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="Core CS Revision API",
-    description="FastAPI & PostgreSQL Backend for CS revision progress tracking with JWT Auth Layer",
+    title="CSForge API",
+    description="FastAPI Backend for CSForge learning progress tracking with JWT Auth Layer",
     version="1.0.0"
 )
 
@@ -52,7 +52,7 @@ else:
     @app.get("/")
     def index():
         return {
-            "message": "Core CS Revision FastAPI Active!",
+            "message": "CSForge FastAPI Active!",
             "status": "Ready",
             "database": str(engine.url),
             "docs": "/docs"
