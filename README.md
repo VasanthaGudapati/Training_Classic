@@ -1,4 +1,4 @@
-# 🎓 CSForge - Days 1 to 5 Training Repository
+# 🎓 CSForge - Days 1 to 6 Training Repository
 
 Learn • Practice • Build • Get Hired
 
@@ -16,7 +16,8 @@ Days/
 ├── Day02/   # 📊 Dynamic Arrays, Resizing Visualizer & Benchmark
 ├── Day03/   # 🔤 Strings, Substring Searching & Sliding Window
 ├── Day04/   # 🔁 Recursion, Call Stack Visualizer & Memoization Benchmark
-└── Day05/   # 🔗 Singly & Doubly Linked Lists & Floyd's Cycle Detection
+├── Day05/   # 🔗 Singly & Doubly Linked Lists & Floyd's Cycle Detection
+└── Day06/   # 📶 Basic Searching, Bubble/Selection/Insertion/Merge Sort
 ```
 
 ---
@@ -40,6 +41,9 @@ python Days/Day04/main.py
 
 # Day 05: Linked List Visualizer & Cycle Detector
 python Days/Day05/main.py
+
+# Day 06: Searching & Sorting Algorithms Benchmark
+python Days/Day06/main.py
 ```
 
 ---
@@ -49,7 +53,7 @@ python Days/Day05/main.py
 Each Day includes a comprehensive suite of automated unit tests:
 
 ```bash
-python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests()"
+python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests()"
 ```
 
 Happy Coding! 🚀
