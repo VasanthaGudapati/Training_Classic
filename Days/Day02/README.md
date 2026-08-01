@@ -9,5 +9,5 @@
 ## 🚀 How to Run
 From the repository root, run:
 ```bash
-python Day02/main.py
+python Days/Day02/main.py
 ```

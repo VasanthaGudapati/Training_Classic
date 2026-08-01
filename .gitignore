@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE metadata
+.idea/
+.vscode/
+
+# Environment / local files
+.env
+local.db
+high_score.txt
