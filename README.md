@@ -1,4 +1,4 @@
-# 🎓 CSForge - Days 1 to 7 Training Repository
+# 🎓 CSForge - Days 1 to 8 Training Repository
 
 Learn • Practice • Build • Get Hired
 
@@ -18,7 +18,8 @@ Days/
 ├── Day04/   # 🔁 Recursion, Call Stack Visualizer & Memoization Benchmark
 ├── Day05/   # 🔗 Singly & Doubly Linked Lists & Floyd's Cycle Detection
 ├── Day06/   # 📶 Basic Searching, Bubble/Selection/Insertion/Merge Sort
-└── Day07/   # 🏦 OOP Pillars (Encapsulation, Inheritance, Polymorphism) & Banking System
+├── Day07/   # 🏦 OOP Pillars (Encapsulation, Inheritance, Polymorphism) & Banking System
+└── Day08/   # 🥞 Stacks (LIFO), Queues (FIFO) & Bracket Validation Algorithm
 ```
 
 ---
@@ -48,6 +49,9 @@ python Days/Day06/main.py
 
 # Day 07: OOP Banking Simulator
 python Days/Day07/main.py
+
+# Day 08: Stacks, Queues & Bracket Validator
+python Days/Day08/main.py
 ```
 
 ---
@@ -57,7 +61,7 @@ python Days/Day07/main.py
 Each Day includes a comprehensive suite of automated unit tests:
 
 ```bash
-python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests()"
+python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests()"
 ```
 
 Happy Coding! 🚀
