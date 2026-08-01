@@ -1,4 +1,4 @@
-# 🎓 CSForge - Days 1 to 10 Training Repository
+# 🎓 CSForge - Days 1 to 11 Training Repository
 
 Learn • Practice • Build • Get Hired
 
@@ -21,7 +21,8 @@ Days/
 ├── Day07/   # 🏦 OOP Pillars (Encapsulation, Inheritance, Polymorphism) & Banking System
 ├── Day08/   # 🥞 Stacks (LIFO), Queues (FIFO) & Bracket Validation Algorithm
 ├── Day09/   # 🔑 Custom Hash Table / HashMap (Separate Chaining & Polynomial Hash)
-└── Day10/   # 🌳 Binary Trees & Recursive Traversals (In-Order, Pre-Order, Post-Order, BFS)
+├── Day10/   # 🌳 Binary Trees & Recursive Traversals (In-Order, Pre-Order, Post-Order, BFS)
+└── Day11/   # 🌲 Binary Search Trees (BST - Insertion, Search, Deletion, Validation)
 ```
 
 ---
@@ -60,6 +61,9 @@ python Days/Day09/main.py
 
 # Day 10: Binary Tree Traversals & Metrics Visualizer
 python Days/Day10/main.py
+
+# Day 11: Binary Search Tree (BST) Playground
+python Days/Day11/main.py
 ```
 
 ---
@@ -69,7 +73,7 @@ python Days/Day10/main.py
 Each Day includes a comprehensive suite of automated unit tests:
 
 ```bash
-python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests()"
+python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests()"
 ```
 
 Happy Coding! 🚀
