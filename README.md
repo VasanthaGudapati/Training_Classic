@@ -1,8 +1,8 @@
-# 🎓 CSForge - Days 1 to 13 Training Repository
+# 🎓 CSForge - Days 1 to 14 Training Repository
 
 Learn • Practice • Build • Get Hired
 
-Welcome to **CSForge**! This repository organizes daily Computer Science practice, data structures, algorithms, object-oriented design, operating systems file I/O, and interactive CLI tools.
+Welcome to **CSForge**! This repository organizes daily Computer Science practice, data structures, algorithms, object-oriented design, operating systems file I/O, CPU scheduling simulations, and interactive CLI tools.
 
 ---
 
@@ -24,7 +24,8 @@ Days/
 ├── Day10/   # 🌳 Binary Trees & Recursive Traversals (In-Order, Pre-Order, Post-Order, BFS)
 ├── Day11/   # 🌲 Binary Search Trees (BST - Insertion, Search, Deletion, Validation)
 ├── Day12/   # 🕸️ Graph Representations (Adjacency List), BFS, DFS & Shortest Path
-└── Day13/   # 📋 File I/O & Log Parser (Context Managers, Stream Processing, Exception Handling)
+├── Day13/   # 📋 File I/O & Log Parser (Context Managers, Stream Processing, Exception Handling)
+└── Day14/   # ⏱️ Process CPU Scheduling Simulation (FCFS, Round Robin, Gantt Chart)
 ```
 
 ---
@@ -72,6 +73,9 @@ python Days/Day12/main.py
 
 # Day 13: Log Parser & System Error Analysis Toolkit
 python Days/Day13/main.py
+
+# Day 14: CPU Scheduling Simulator & Gantt Chart Visualizer
+python Days/Day14/main.py
 ```
 
 ---
@@ -81,7 +85,7 @@ python Days/Day13/main.py
 Each Day includes a comprehensive suite of automated unit tests:
 
 ```bash
-python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests(); import Days.Day12.main as d12; d12.run_unit_tests(); import Days.Day13.main as d13; d13.run_unit_tests()"
+python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests(); import Days.Day12.main as d12; d12.run_unit_tests(); import Days.Day13.main as d13; d13.run_unit_tests(); import Days.Day14.main as d14; d14.run_unit_tests()"
 ```
 
 Happy Coding! 🚀
