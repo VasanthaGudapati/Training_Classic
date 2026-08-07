@@ -1,8 +1,8 @@
-# 🎓 CSForge - Days 1 to 23 Training Repository
+# 🎓 CSForge - Days 1 to 24 Training Repository
 
 Learn • Practice • Build • Get Hired
 
-Welcome to **CSForge**! This repository organizes daily Computer Science practice, data structures, algorithms, object-oriented design, operating systems file I/O, CPU scheduling simulations, multi-threading, thread synchronization, FIFO & LRU cache strategies, RLE file compression, priority queues & binary heaps, trie prefix trees & autocomplete engines, disjoint set union (DSU) & Kruskal's minimum spanning tree algorithms, dynamic programming (0/1 knapsack), and interactive CLI tools.
+Welcome to **CSForge**! This repository organizes daily Computer Science practice, data structures, algorithms, object-oriented design, operating systems file I/O, CPU scheduling simulations, multi-threading, thread synchronization, FIFO & LRU cache strategies, RLE file compression, priority queues & binary heaps, trie prefix trees & autocomplete engines, disjoint set union (DSU) & Kruskal's minimum spanning tree algorithms, dynamic programming (0/1 knapsack), Dijkstra's shortest path algorithm, and interactive CLI tools.
 
 ---
 
@@ -34,7 +34,8 @@ Days/
 ├── Day20/   # 🌲 Priority Queue & Binary Heap (Array Min-Heap, O(N) Build-Heap & Scheduler)
 ├── Day21/   # 🌲 Trie (Prefix Tree) & Autocomplete Engine (Top-K Ranking & Search)
 ├── Day22/   # 🌐 Disjoint Set Union (DSU) & Kruskal's MST Algorithm (Network Backbone Design)
-└── Day23/   # 🎒 Dynamic Programming (0/1 Knapsack Problem, 2D/1D Tabulation & Benchmark)
+├── Day23/   # 🎒 Dynamic Programming (0/1 Knapsack Problem, 2D/1D Tabulation & Benchmark)
+└── Day24/   # 🕸️ Dijkstra's Shortest Path Algorithm (O((V+E) log V) Min-Heap & Router Simulator)
 ```
 
 ---
@@ -83,7 +84,7 @@ python Days/Day12/main.py
 # Day 13: Log Parser & System Error Analysis Toolkit
 python Days/Day13/main.py
 
-# Day 14: CPU Scheduling Simulator & Gantt Chart Visualizer
+# Day 14: CPU Scheduling Simulation & Gantt Chart Visualizer
 python Days/Day14/main.py
 
 # Day 15: Multi-threading Playground & Concurrency Benchmark
@@ -112,6 +113,9 @@ python Days/Day22/main.py
 
 # Day 23: 0/1 Knapsack Dynamic Programming Toolkit
 python Days/Day23/main.py
+
+# Day 24: Dijkstra Shortest Path Router Toolkit
+python Days/Day24/main.py
 ```
 
 ---
@@ -121,12 +125,7 @@ python Days/Day23/main.py
 Each Day includes a comprehensive suite of automated unit tests:
 
 ```bash
-python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests(); import Days.Day12.main as d12; d12.run_unit_tests(); import Days.Day13.main as d13; d13.run_unit_tests(); import Days.Day14.main as d14; d14.run_unit_tests(); import Days.Day15.main as d15; d15.run_unit_tests(); import Days.Day16.main as d16; d16.run_unit_tests(); import Days.Day17.main as d17; d17.run_unit_tests(); import Days.Day18.main as d18; d18.run_unit_tests(); import Days.Day19.main as d19; d19.run_unit_tests(); import Days.Day20.main as d20; d20.run_unit_tests(); import Days.Day21.main as d21; d21.run_unit_tests(); import Days.Day22.main as d22; d22.run_unit_tests(); import Days.Day23.main as d23; d23.run_unit_tests()"
+python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests(); import Days.Day12.main as d12; d12.run_unit_tests(); import Days.Day13.main as d13; d13.run_unit_tests(); import Days.Day14.main as d14; d14.run_unit_tests(); import Days.Day15.main as d15; d15.run_unit_tests(); import Days.Day16.main as d16; d16.run_unit_tests(); import Days.Day17.main as d17; d17.run_unit_tests(); import Days.Day18.main as d18; d18.run_unit_tests(); import Days.Day19.main as d19; d19.run_unit_tests(); import Days.Day20.main as d20; d20.run_unit_tests(); import Days.Day21.main as d21; d21.run_unit_tests(); import Days.Day22.main as d22; d22.run_unit_tests(); import Days.Day23.main as d23; d23.run_unit_tests(); import Days.Day24.main as d24; d24.run_unit_tests()"
 ```
 
 Happy Coding! 🚀
-
-
-
-
-
