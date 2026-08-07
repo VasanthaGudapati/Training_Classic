@@ -1,8 +1,8 @@
-# 🎓 CSForge - Days 1 to 18 Training Repository
+# 🎓 CSForge - Days 1 to 19 Training Repository
 
 Learn • Practice • Build • Get Hired
 
-Welcome to **CSForge**! This repository organizes daily Computer Science practice, data structures, algorithms, object-oriented design, operating systems file I/O, CPU scheduling simulations, multi-threading, thread synchronization, FIFO cache strategies, RLE file compression, and interactive CLI tools.
+Welcome to **CSForge**! This repository organizes daily Computer Science practice, data structures, algorithms, object-oriented design, operating systems file I/O, CPU scheduling simulations, multi-threading, thread synchronization, FIFO & LRU cache strategies, RLE file compression, and interactive CLI tools.
 
 ---
 
@@ -29,7 +29,8 @@ Days/
 ├── Day15/   # 🧵 Multi-threading Intro & Concurrency vs Sequential Performance Benchmark
 ├── Day16/   # 🔒 Thread Synchronization & Locks (Race Condition Simulator & Mutex Lock)
 ├── Day17/   # 🗄️ FIFO Cache Strategy Simulator (Capacity Eviction & Hit Ratio Analyzer)
-└── Day18/   # 📦 File Compression Basics (Run-Length Encoding RLE Compressor & Benchmark)
+├── Day18/   # 📦 File Compression Basics (Run-Length Encoding RLE Compressor & Benchmark)
+└── Day19/   # 🗄️ LRU Cache Strategy Simulator (O(1) Hash Map + Doubly Linked List & Benchmark)
 ```
 
 ---
@@ -92,6 +93,9 @@ python Days/Day17/main.py
 
 # Day 18: RLE File Compression Toolkit & Benchmark
 python Days/Day18/main.py
+
+# Day 19: LRU Cache Simulator & FIFO Benchmark
+python Days/Day19/main.py
 ```
 
 ---
@@ -101,7 +105,8 @@ python Days/Day18/main.py
 Each Day includes a comprehensive suite of automated unit tests:
 
 ```bash
-python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests(); import Days.Day12.main as d12; d12.run_unit_tests(); import Days.Day13.main as d13; d13.run_unit_tests(); import Days.Day14.main as d14; d14.run_unit_tests(); import Days.Day15.main as d15; d15.run_unit_tests(); import Days.Day16.main as d16; d16.run_unit_tests(); import Days.Day17.main as d17; d17.run_unit_tests(); import Days.Day18.main as d18; d18.run_unit_tests()"
+python -c "import Days.Day01.main; import Days.Day02.main as d2; d2.run_unit_tests(); import Days.Day03.main as d3; d3.run_unit_tests(); import Days.Day04.main as d4; d4.run_unit_tests(); import Days.Day05.main as d5; d5.run_unit_tests(); import Days.Day06.main as d6; d6.run_unit_tests(); import Days.Day07.main as d7; d7.run_unit_tests(); import Days.Day08.main as d8; d8.run_unit_tests(); import Days.Day09.main as d9; d9.run_unit_tests(); import Days.Day10.main as d10; d10.run_unit_tests(); import Days.Day11.main as d11; d11.run_unit_tests(); import Days.Day12.main as d12; d12.run_unit_tests(); import Days.Day13.main as d13; d13.run_unit_tests(); import Days.Day14.main as d14; d14.run_unit_tests(); import Days.Day15.main as d15; d15.run_unit_tests(); import Days.Day16.main as d16; d16.run_unit_tests(); import Days.Day17.main as d17; d17.run_unit_tests(); import Days.Day18.main as d18; d18.run_unit_tests(); import Days.Day19.main as d19; d19.run_unit_tests()"
 ```
 
 Happy Coding! 🚀
+
